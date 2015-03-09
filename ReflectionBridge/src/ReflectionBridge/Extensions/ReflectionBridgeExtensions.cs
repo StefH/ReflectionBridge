@@ -3,6 +3,7 @@ using System.Reflection;
 
 #if REFLECTIONBRIDGE
 using System.Collections.Generic;
+using System.Linq;
 #endif
 
 namespace ReflectionBridge.Extensions
@@ -17,17 +18,6 @@ namespace ReflectionBridge.Extensions
             return type.Assembly;
 #endif
         }
-
-        /*
-        public static Attribute[] GetCustomAttributes(this Assembly assembly)
-        {
-#if REFLECTIONBRIDGE
-            return assembly.GetCustomAttributes();
-#else
-            return assembly.GetCustomAttributes(inherit: false).Cast<Attribute>().ToArray();
-#endif
-        }
-        */
 
         public static bool IsEnum(this Type type)
         {
@@ -175,6 +165,16 @@ namespace ReflectionBridge.Extensions
         public static bool IsAssignableFrom(this Type type, Type otherType)
         {
             return type.GetTypeInfo().IsAssignableFrom(otherType.GetTypeInfo());
+        }
+
+        public static bool IsSubclassOf(this Type type, Type c)
+        {
+            return type.GetTypeInfo().IsSubclassOf(c);
+        }
+
+        public static Attribute[] GetCustomAttributes(this Type type)
+        {
+            return type.GetTypeInfo().GetCustomAttributes().ToArray();
         }
 #endif
     }
