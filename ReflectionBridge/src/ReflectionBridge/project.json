@@ -1,0 +1,38 @@
+﻿{
+    // NuGet settings
+    "version": "0.0.1-*",
+    "authors": [ "Stef Heyenrath" ],
+    "owners": [ "Stef Heyenrath" ],
+    "description": "Provides some extensions which define a bridge for the differences between Type and TypeInfo.",
+    "summary": "Provides some extensions which define a bridge for the differences between Type and TypeInfo.",
+    "tags": [ "type", "typeinfo", "extensions", "proxy", "bridge" ],
+    "projectUrl": "https://github.com/StefH/ReflectionBridge",
+    "releasenotes": "Initial version",
+    // NuGet settings
+
+    "dependencies": {
+    },
+
+    "compilationOptions": {
+        "define": [ "REFLECTIONBRIDGE" ]
+    },
+
+    "frameworks": {
+        "aspnet5": {
+        },
+        "aspnetcore50": {
+            "dependencies": {
+                "System.Runtime": "4.0.20-beta-22605",
+
+                "System.Collections": "4.0.10-beta-22605",
+
+                "System.Linq": "4.0.0-beta-22605",
+
+                "System.Reflection": "4.0.10-beta-22605",
+                "System.Reflection.Extensions": "4.0.0-beta-22605",
+                "System.Reflection.Primitives": "4.0.0-beta-22605",
+                "System.Reflection.TypeExtensions": "4.0.0-beta-22605"
+            }
+        }
+    }
+}
