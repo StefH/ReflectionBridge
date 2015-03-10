@@ -1,13 +1,13 @@
 ﻿{
     // NuGet settings
-    "version": "0.0.1-*",
+    "version": "0.0.2-*",
     "authors": [ "Stef Heyenrath" ],
     "owners": [ "Stef Heyenrath" ],
     "description": "Provides some extensions which define a bridge for the differences between Type and TypeInfo.",
     "summary": "Provides some extensions which define a bridge for the differences between Type and TypeInfo.",
     "tags": [ "type", "typeinfo", "extensions", "proxy", "bridge" ],
     "projectUrl": "https://github.com/StefH/ReflectionBridge",
-    "releasenotes": "Initial version",
+    "releasenotes": "Fixes",
     // NuGet settings
 
     "dependencies": {

@@ -28,11 +28,6 @@ namespace ReflectionBridge.Extensions
 #endif
         }
 
-        public static bool IsNullableEnum(this Type type)
-        {
-            return type.IsGenericType() && type.GetGenericTypeDefinition() == typeof(Nullable<>) && type.GetGenericArguments()[0].IsEnum();
-        }
-
         public static bool IsFromLocalAssembly(this Type type)
         {
             var assemblyName = type.GetAssembly().GetName().Name;
@@ -86,15 +81,6 @@ namespace ReflectionBridge.Extensions
 #else
             return type.IsValueType;
 #endif
-        }
-
-        public static Type UnwrapNullable(this Type type)
-        {
-            if (!type.IsGenericType())
-                return type;
-            if (type.GetGenericTypeDefinition() != typeof(Nullable<>))
-                return type;
-            return type.GetGenericArguments()[0];
         }
 
         public static T GetPropertyValue<T>(this Type type, string propertyName, object target)
@@ -162,10 +148,11 @@ namespace ReflectionBridge.Extensions
             return type.GetTypeInfo().GenericTypeArguments;
         }
 
+        /*
         public static bool IsAssignableFrom(this Type type, Type otherType)
         {
             return type.GetTypeInfo().IsAssignableFrom(otherType.GetTypeInfo());
-        }
+        }*/
 
         public static bool IsSubclassOf(this Type type, Type c)
         {
@@ -175,6 +162,11 @@ namespace ReflectionBridge.Extensions
         public static Attribute[] GetCustomAttributes(this Type type)
         {
             return type.GetTypeInfo().GetCustomAttributes().ToArray();
+        }
+
+        public static Attribute[] GetCustomAttributes(this Type type, Type attributeType, bool inherit)
+        {
+            return type.GetTypeInfo().GetCustomAttributes(attributeType, inherit).Cast<Attribute>().ToArray();
         }
 #endif
     }
