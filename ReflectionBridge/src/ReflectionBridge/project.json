@@ -1,13 +1,13 @@
 ﻿{
     // NuGet settings
-    "version": "0.0.2-*",
+    "version": "0.0.3-*",
     "authors": [ "Stef Heyenrath" ],
     "owners": [ "Stef Heyenrath" ],
     "description": "Provides some extensions which define a bridge for the differences between Type and TypeInfo.",
     "summary": "Provides some extensions which define a bridge for the differences between Type and TypeInfo.",
     "tags": [ "type", "typeinfo", "extensions", "proxy", "bridge" ],
     "projectUrl": "https://github.com/StefH/ReflectionBridge",
-    "releasenotes": "Fixes",
+    "releasenotes": "Added NET40 and NET45",
     // NuGet settings
 
     "dependencies": {
@@ -18,6 +18,10 @@
     },
 
     "frameworks": {
+        "net40": {
+        },
+        "net45": {
+        },
         "aspnet5": {
         },
         "aspnetcore50": {
