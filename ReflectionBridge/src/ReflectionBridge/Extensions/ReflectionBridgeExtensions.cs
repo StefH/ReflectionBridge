@@ -28,6 +28,33 @@ namespace ReflectionBridge.Extensions
 #endif
         }
 
+        public static bool IsPrimitive(this Type type)
+        {
+#if REFLECTIONBRIDGE && !NET40
+            return type.GetTypeInfo().IsPrimitive;
+#else
+            return type.IsPrimitive;
+#endif
+        }
+
+        public static bool IsPublic(this Type type)
+        {
+#if REFLECTIONBRIDGE && !NET40
+            return type.GetTypeInfo().IsPublic;
+#else
+            return type.IsPublic;
+#endif
+        }
+
+        public static bool IsNestedPublic(this Type type)
+        {
+#if REFLECTIONBRIDGE && !NET40
+            return type.GetTypeInfo().IsNestedPublic;
+#else
+            return type.IsNestedPublic;
+#endif
+        }
+
         public static bool IsFromLocalAssembly(this Type type)
         {
             var assemblyName = type.GetAssembly().GetName().Name;
