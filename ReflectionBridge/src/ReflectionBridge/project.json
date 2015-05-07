@@ -3,6 +3,7 @@
     "version": "0.0.4-*",
     "authors": [ "Stef Heyenrath" ],
     "owners": [ "Stef Heyenrath" ],
+    "title": "ReflectionBridge",
     "description": "Provides some extensions which define a bridge for the differences between Type and TypeInfo.",
     "summary": "Provides some extensions which define a bridge for the differences between Type and TypeInfo.",
     "tags": [ "type", "typeinfo", "extensions", "proxy", "bridge" ],
@@ -26,16 +27,16 @@
         },
         "dnxcore50": {
             "dependencies": {
-                "System.Runtime": "4.0.20-beta-22816",
+                "System.Runtime": "4.0.20-beta-*",
 
-                "System.Collections": "4.0.10-beta-22816",
+                "System.Collections": "4.0.10-beta-*",
 
-                "System.Linq": "4.0.0-beta-22816",
+                "System.Linq": "4.0.0-beta-*",
 
-                "System.Reflection": "4.0.10-beta-22816",
-                "System.Reflection.Extensions": "4.0.0-beta-22816",
-                "System.Reflection.Primitives": "4.0.0-beta-22816",
-                "System.Reflection.TypeExtensions": "4.0.0-beta-22816"
+                "System.Reflection": "4.0.10-beta-*",
+                "System.Reflection.Extensions": "4.0.0-beta-*",
+                "System.Reflection.Primitives": "4.0.0-beta-*",
+                "System.Reflection.TypeExtensions": "4.0.0-beta-*"
             }
         }
     }
