@@ -1,6 +1,5 @@
 ﻿{
-    // NuGet settings
-    "version": "0.0.4-*",
+    "version": "0.0.5-*",
     "authors": [ "Stef Heyenrath" ],
     "owners": [ "Stef Heyenrath" ],
     "title": "ReflectionBridge",
@@ -8,8 +7,7 @@
     "summary": "Provides some extensions which define a bridge for the differences between Type and TypeInfo.",
     "tags": [ "type", "typeinfo", "extensions", "proxy", "bridge" ],
     "projectUrl": "https://github.com/StefH/ReflectionBridge",
-    "releasenotes": "Added NET40 and NET45. Upgraded to dnx 1.0.0-beta4",
-    // NuGet settings
+    "releasenotes": "Upgraded to dnx-coreclr 1.0.0-rc1-update1 and used non-beta versions in the depenencies",
 
     "dependencies": {
     },
@@ -25,18 +23,18 @@
         },
         "dnx451": {
         },
-        "dnxcore50": {
+        "dnxcore5": {
             "dependencies": {
-                "System.Runtime": "4.0.20-beta-*",
+                "System.Runtime": "4.0.20",
 
-                "System.Collections": "4.0.10-beta-*",
+                "System.Collections": "4.0.10",
 
-                "System.Linq": "4.0.0-beta-*",
+                "System.Linq": "4.0.0",
 
-                "System.Reflection": "4.0.10-beta-*",
-                "System.Reflection.Extensions": "4.0.0-beta-*",
-                "System.Reflection.Primitives": "4.0.0-beta-*",
-                "System.Reflection.TypeExtensions": "4.0.0-beta-*"
+                "System.Reflection": "4.0.10",
+                "System.Reflection.Extensions": "4.0.0",
+                "System.Reflection.Primitives": "4.0.0",
+                "System.Reflection.TypeExtensions": "4.0.0"
             }
         }
     }
