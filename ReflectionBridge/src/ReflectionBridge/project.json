@@ -10,7 +10,7 @@
     "tooling": {
         "defaultNamespace": "ReflectionBridge"
     },
-    "releasenotes": "Added more frameworks",
+    "releasenotes": "Added dotnet5.4 and uap10.0",
 
     "dependencies": {
     },
