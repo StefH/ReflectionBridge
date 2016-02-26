@@ -47,7 +47,7 @@
 
                 "System.Linq": "4.0.1-beta-*",
 
-                "System.Reflection": "4.0.10-beta-*",
+                "System.Reflection": "4.1.0-beta-*",
                 "System.Reflection.Extensions": "4.0.1-beta-*",
                 "System.Reflection.Primitives": "4.0.1-beta-*",
                 "System.Reflection.TypeExtensions": "4.0.1-beta-*"
@@ -75,7 +75,7 @@
 
                 "System.Linq": "4.0.1-beta-*",
 
-                "System.Reflection": "4.0.10-beta-*",
+                "System.Reflection": "4.1.0-beta-*",
                 "System.Reflection.Extensions": "4.0.1-beta-*",
                 "System.Reflection.Primitives": "4.0.1-beta-*",
                 "System.Reflection.TypeExtensions": "4.0.1-beta-*"
@@ -107,7 +107,7 @@
 
                 "System.Linq": "4.0.1-beta-*",
 
-                "System.Reflection": "4.0.10-beta-*",
+                "System.Reflection": "4.1.0-beta-*",
                 "System.Reflection.Extensions": "4.0.1-beta-*",
                 "System.Reflection.Primitives": "4.0.1-beta-*",
                 "System.Reflection.TypeExtensions": "4.0.1-beta-*"
@@ -121,7 +121,7 @@
 
                 "System.Linq": "4.0.1-beta-*",
 
-                "System.Reflection": "4.0.10-beta-*",
+                "System.Reflection": "4.1.0-beta-*",
                 "System.Reflection.Extensions": "4.0.1-beta-*",
                 "System.Reflection.Primitives": "4.0.1-beta-*",
                 "System.Reflection.TypeExtensions": "4.0.1-beta-*"
@@ -135,7 +135,7 @@
 
                 "System.Linq": "4.0.1-beta-*",
 
-                "System.Reflection": "4.0.10-beta-*",
+                "System.Reflection": "4.1.0-beta-*",
                 "System.Reflection.Extensions": "4.0.1-beta-*",
                 "System.Reflection.Primitives": "4.0.1-beta-*",
                 "System.Reflection.TypeExtensions": "4.0.1-beta-*"
