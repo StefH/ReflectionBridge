@@ -28,6 +28,15 @@ namespace ReflectionBridge.Extensions
 #endif
         }
 
+        public static bool IsClass(this Type type)
+        {
+#if REFLECTIONBRIDGE && (!(NET40 || NET35 || NET20))
+            return type.GetTypeInfo().IsClass;
+#else
+            return type.IsClass;
+#endif
+        }
+
         public static bool IsPrimitive(this Type type)
         {
 #if REFLECTIONBRIDGE && (!(NET40 || NET35 || NET20))

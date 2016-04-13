@@ -1,16 +1,16 @@
 ﻿{
-    "version": "0.0.8-*",
+    "version": "0.0.9-*",
     "authors": [ "Stef Heyenrath" ],
     "owners": [ "Stef Heyenrath" ],
     "title": "ReflectionBridge",
     "description": "Provides some extensions which define a bridge for the differences between Type and TypeInfo.",
     "summary": "Provides some extensions which define a bridge for the differences between Type and TypeInfo.",
-    "tags": [ "type", "typeinfo", "extensions", "proxy", "bridge" ],
+    "tags": [ "type", "typeinfo", "extensions", "proxy", "bridge", "reflection" ],
     "projectUrl": "https://github.com/StefH/ReflectionBridge",
     "tooling": {
         "defaultNamespace": "ReflectionBridge"
     },
-    "releasenotes": "Added dotnet5.4 and uap10.0",
+    "releasenotes": "Added IsClass() extension",
 
     "dependencies": {
     },
@@ -47,9 +47,7 @@
 
                 "System.Linq": "4.0.1-beta-*",
 
-                "System.Reflection": "4.1.0-beta-*",
                 "System.Reflection.Extensions": "4.0.1-beta-*",
-                "System.Reflection.Primitives": "4.0.1-beta-*",
                 "System.Reflection.TypeExtensions": "4.0.1-beta-*"
             }
         },
@@ -61,9 +59,7 @@
 
                 "System.Linq": "4.0.1-beta-*",
 
-                "System.Reflection": "4.1.0-beta-*",
                 "System.Reflection.Extensions": "4.0.1-beta-*",
-                "System.Reflection.Primitives": "4.0.1-beta-*",
                 "System.Reflection.TypeExtensions": "4.0.1-beta-*"
             }
         },
@@ -74,10 +70,7 @@
                 "System.Collections": "4.0.11-beta-*",
 
                 "System.Linq": "4.0.1-beta-*",
-
-                "System.Reflection": "4.1.0-beta-*",
                 "System.Reflection.Extensions": "4.0.1-beta-*",
-                "System.Reflection.Primitives": "4.0.1-beta-*",
                 "System.Reflection.TypeExtensions": "4.0.1-beta-*"
             }
         },
@@ -107,9 +100,7 @@
 
                 "System.Linq": "4.0.1-beta-*",
 
-                "System.Reflection": "4.1.0-beta-*",
                 "System.Reflection.Extensions": "4.0.1-beta-*",
-                "System.Reflection.Primitives": "4.0.1-beta-*",
                 "System.Reflection.TypeExtensions": "4.0.1-beta-*"
             }
         },
@@ -121,9 +112,7 @@
 
                 "System.Linq": "4.0.1-beta-*",
 
-                "System.Reflection": "4.1.0-beta-*",
                 "System.Reflection.Extensions": "4.0.1-beta-*",
-                "System.Reflection.Primitives": "4.0.1-beta-*",
                 "System.Reflection.TypeExtensions": "4.0.1-beta-*"
             }
         },
@@ -134,10 +123,8 @@
                 "System.Collections": "4.0.11-beta-*",
 
                 "System.Linq": "4.0.1-beta-*",
-
-                "System.Reflection": "4.1.0-beta-*",
+                
                 "System.Reflection.Extensions": "4.0.1-beta-*",
-                "System.Reflection.Primitives": "4.0.1-beta-*",
                 "System.Reflection.TypeExtensions": "4.0.1-beta-*"
             }
         }
