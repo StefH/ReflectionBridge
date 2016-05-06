@@ -19,6 +19,24 @@ namespace ReflectionBridge.Extensions
 #endif
         }
 
+        public static bool IsSealed(this Type type)
+        {
+#if REFLECTIONBRIDGE && (!(NET40 || NET35 || NET20))
+            return type.GetTypeInfo().IsSealed;
+#else
+            return type.IsSealed;
+#endif
+        }
+
+        public static bool IsAbstract(this Type type)
+        {
+#if REFLECTIONBRIDGE && (!(NET40 || NET35 || NET20))
+            return type.GetTypeInfo().IsAbstract;
+#else
+            return type.IsAbstract;
+#endif
+        }
+
         public static bool IsEnum(this Type type)
         {
 #if REFLECTIONBRIDGE && (!(NET40 || NET35 || NET20))
