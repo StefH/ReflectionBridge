@@ -1,5 +1,6 @@
 # ReflectionBridge
-ReflectionBridge
+
+[![Build status](https://ci.appveyor.com/api/projects/status/xe3rcxeyyvfr9kwc?svg=true)](https://ci.appveyor.com/project/StefH/ReflectionBridge)
 
 Provides some extensions which define a bridge for the differences between Type and TypeInfo.
 
