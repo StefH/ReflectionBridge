@@ -2,10 +2,9 @@ os: Visual Studio 2015
 
 install:
 - dnvm upgrade -r clr
-- dnu restore
 
 before_build:
-  - nuget restore
+- cmd: dnu restore ReflectionBridge\src\ReflectionBridge
 
 build:
   verbosity: minimal
