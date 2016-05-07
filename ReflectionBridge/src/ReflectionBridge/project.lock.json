@@ -1089,6 +1089,7 @@
         }
       }
     },
+    "Silverlight,Version=v5.0": {},
     ".NETFramework,Version=v2.0/win7-x86": {
       "LINQBridge/1.3.0": {
         "type": "package",
@@ -3316,7 +3317,9 @@
           "lib/wpa81/_._": {}
         }
       }
-    }
+    },
+    "Silverlight,Version=v5.0/win7-x86": {},
+    "Silverlight,Version=v5.0/win7-x64": {}
   },
   "libraries": {
     "LINQBridge/1.3.0": {
@@ -4164,6 +4167,13 @@
       "System.Linq >= 4.0.1-beta-*",
       "System.Reflection.Extensions >= 4.0.1-beta-*",
       "System.Reflection.TypeExtensions >= 4.0.1-beta-*"
+    ],
+    "Silverlight,Version=v5.0": [
+      "fx/mscorlib ",
+      "fx/System ",
+      "fx/System.Core ",
+      "fx/System.Net ",
+      "fx/System.Windows "
     ]
   }
 }

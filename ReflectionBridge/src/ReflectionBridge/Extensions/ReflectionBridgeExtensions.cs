@@ -21,7 +21,7 @@ namespace ReflectionBridge.Extensions
 
         public static bool IsSealed(this Type type)
         {
-#if REFLECTIONBRIDGE && (!(NET40 || NET35 || NET20))
+#if REFLECTIONBRIDGE && (!(NET40 || NET35 || NET20 || SILVERLIGHT))
             return type.GetTypeInfo().IsSealed;
 #else
             return type.IsSealed;
@@ -30,7 +30,7 @@ namespace ReflectionBridge.Extensions
 
         public static bool IsAbstract(this Type type)
         {
-#if REFLECTIONBRIDGE && (!(NET40 || NET35 || NET20))
+#if REFLECTIONBRIDGE && (!(NET40 || NET35 || NET20 || SILVERLIGHT))
             return type.GetTypeInfo().IsAbstract;
 #else
             return type.IsAbstract;
@@ -39,7 +39,7 @@ namespace ReflectionBridge.Extensions
 
         public static bool IsEnum(this Type type)
         {
-#if REFLECTIONBRIDGE && (!(NET40 || NET35 || NET20))
+#if REFLECTIONBRIDGE && (!(NET40 || NET35 || NET20 || SILVERLIGHT))
             return type.GetTypeInfo().IsEnum;
 #else
             return type.IsEnum;
@@ -48,7 +48,7 @@ namespace ReflectionBridge.Extensions
 
         public static bool IsClass(this Type type)
         {
-#if REFLECTIONBRIDGE && (!(NET40 || NET35 || NET20))
+#if REFLECTIONBRIDGE && (!(NET40 || NET35 || NET20 || SILVERLIGHT))
             return type.GetTypeInfo().IsClass;
 #else
             return type.IsClass;
@@ -57,7 +57,7 @@ namespace ReflectionBridge.Extensions
 
         public static bool IsPrimitive(this Type type)
         {
-#if REFLECTIONBRIDGE && (!(NET40 || NET35 || NET20))
+#if REFLECTIONBRIDGE && (!(NET40 || NET35 || NET20 || SILVERLIGHT))
             return type.GetTypeInfo().IsPrimitive;
 #else
             return type.IsPrimitive;
@@ -66,7 +66,7 @@ namespace ReflectionBridge.Extensions
 
         public static bool IsPublic(this Type type)
         {
-#if REFLECTIONBRIDGE && (!(NET40 || NET35 || NET20))
+#if REFLECTIONBRIDGE && (!(NET40 || NET35 || NET20 || SILVERLIGHT))
             return type.GetTypeInfo().IsPublic;
 #else
             return type.IsPublic;
@@ -75,7 +75,7 @@ namespace ReflectionBridge.Extensions
 
         public static bool IsNestedPublic(this Type type)
         {
-#if REFLECTIONBRIDGE && (!(NET40 || NET35 || NET20))
+#if REFLECTIONBRIDGE && (!(NET40 || NET35 || NET20 || SILVERLIGHT))
             return type.GetTypeInfo().IsNestedPublic;
 #else
             return type.IsNestedPublic;
@@ -84,11 +84,15 @@ namespace ReflectionBridge.Extensions
 
         public static bool IsFromLocalAssembly(this Type type)
         {
-            var assemblyName = type.GetAssembly().GetName().Name;
+#if SILVERLIGHT
+            string assemblyName = type.GetAssembly().FullName;
+#else
+            string assemblyName = type.GetAssembly().GetName().Name;
+#endif
 
             try
             {
-#if REFLECTIONBRIDGE && (!(NET40 || NET35 || NET20))
+#if REFLECTIONBRIDGE && (!(NET40 || NET35 || NET20 || SILVERLIGHT))
                 Assembly.Load(new AssemblyName { Name = assemblyName });
 #else
                 Assembly.Load(assemblyName);
@@ -103,7 +107,7 @@ namespace ReflectionBridge.Extensions
 
         public static bool IsGenericType(this Type type)
         {
-#if REFLECTIONBRIDGE && (!(NET40 || NET35 || NET20))
+#if REFLECTIONBRIDGE && (!(NET40 || NET35 || NET20 || SILVERLIGHT))
             return type.GetTypeInfo().IsGenericType;
 #else
             return type.IsGenericType;
@@ -112,7 +116,7 @@ namespace ReflectionBridge.Extensions
 
         public static bool IsInterface(this Type type)
         {
-#if REFLECTIONBRIDGE && (!(NET40 || NET35 || NET20))
+#if REFLECTIONBRIDGE && (!(NET40 || NET35 || NET20 || SILVERLIGHT))
             return type.GetTypeInfo().IsInterface;
 #else
             return type.IsInterface;
@@ -121,7 +125,7 @@ namespace ReflectionBridge.Extensions
 
         public static Type BaseType(this Type type)
         {
-#if REFLECTIONBRIDGE && (!(NET40 || NET35 || NET20))
+#if REFLECTIONBRIDGE && (!(NET40 || NET35 || NET20 || SILVERLIGHT))
             return type.GetTypeInfo().BaseType;
 #else
             return type.BaseType;
@@ -130,7 +134,7 @@ namespace ReflectionBridge.Extensions
 
         public static bool IsValueType(this Type type)
         {
-#if REFLECTIONBRIDGE && (!(NET40 || NET35 || NET20))
+#if REFLECTIONBRIDGE && (!(NET40 || NET35 || NET20 || SILVERLIGHT))
             return type.GetTypeInfo().IsValueType;
 #else
             return type.IsValueType;
@@ -139,7 +143,7 @@ namespace ReflectionBridge.Extensions
 
         public static T GetPropertyValue<T>(this Type type, string propertyName, object target)
         {
-#if REFLECTIONBRIDGE && (!(NET40 || NET35 || NET20))
+#if REFLECTIONBRIDGE && (!(NET40 || NET35 || NET20 || SILVERLIGHT))
             PropertyInfo property = type.GetTypeInfo().GetDeclaredProperty(propertyName);
             return (T)property.GetValue(target);
 #else
@@ -149,7 +153,7 @@ namespace ReflectionBridge.Extensions
 
         public static void SetPropertyValue(this Type type, string propertyName, object target, object value)
         {
-#if REFLECTIONBRIDGE && (!(NET40 || NET35 || NET20))
+#if REFLECTIONBRIDGE && (!(NET40 || NET35 || NET20 || SILVERLIGHT))
             PropertyInfo property = type.GetTypeInfo().GetDeclaredProperty(propertyName);
             property.SetValue(target, value);
 #else
@@ -159,7 +163,7 @@ namespace ReflectionBridge.Extensions
 
         public static void SetFieldValue(this Type type, string fieldName, object target, object value)
         {
-#if REFLECTIONBRIDGE && (!(NET40 || NET35 || NET20))
+#if REFLECTIONBRIDGE && (!(NET40 || NET35 || NET20 || SILVERLIGHT))
             FieldInfo field = type.GetTypeInfo().GetDeclaredField(fieldName);
             if (field != null)
             {
@@ -176,7 +180,7 @@ namespace ReflectionBridge.Extensions
 
         public static void InvokeMethod<T>(this Type type, string methodName, object target, T value)
         {
-#if REFLECTIONBRIDGE && (!(NET40 || NET35 || NET20))
+#if REFLECTIONBRIDGE && (!(NET40 || NET35 || NET20 || SILVERLIGHT))
             MethodInfo method = type.GetTypeInfo().GetDeclaredMethod(methodName);
             method.Invoke(target, new object[] { value });
 #else
@@ -184,7 +188,7 @@ namespace ReflectionBridge.Extensions
 #endif
         }
 
-#if REFLECTIONBRIDGE && (!(NET40 || NET35 || NET20))
+#if REFLECTIONBRIDGE && (!(NET40 || NET35 || NET20 || SILVERLIGHT))
         public static IEnumerable<MethodInfo> GetMethods(this Type someType)
         {
             var t = someType;
