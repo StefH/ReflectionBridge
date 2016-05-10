@@ -1,5 +1,5 @@
 ﻿{
-    "version": "0.0.10-*",
+    "version": "0.0.11-*",
     "authors": [ "Stef Heyenrath" ],
     "owners": [ "Stef Heyenrath" ],
     "title": "ReflectionBridge",
@@ -10,7 +10,7 @@
     "tooling": {
         "defaultNamespace": "ReflectionBridge"
     },
-    "releasenotes": "Added IsSealed() and IsAbstract() extensions and added Framework SL50.",
+    "releasenotes": "Added dotnet5.1",
 
     "dependencies": {
     },
@@ -104,6 +104,18 @@
                 "System.Reflection.TypeExtensions": "4.0.1-beta-*"
             }
         },
+        "dotnet5.1": {
+            "dependencies": {
+                "System.Runtime": "4.0.0",
+
+                "System.Collections": "4.0.10",
+
+                "System.Linq": "4.0.0",
+
+                "System.Reflection.Extensions": "4.0.0",
+                "System.Reflection.TypeExtensions": "4.0.0"
+            }
+        },
         "dotnet5.4": {
             "dependencies": {
                 "System.Runtime": "4.0.21-beta-*",
@@ -133,7 +145,7 @@
                 "define": [ "SILVERLIGHT" ]
             },
             "dependencies": {
-                
+
             },
             "frameworkAssemblies": {
                 "mscorlib": "",
