@@ -1,21 +1,29 @@
 ﻿{
-    "version": "0.0.10-*",
+    "version": "0.0.11-*",
     "authors": [ "Stef Heyenrath" ],
-    "owners": [ "Stef Heyenrath" ],
     "title": "ReflectionBridge",
     "description": "Provides some extensions which define a bridge for the differences between Type and TypeInfo.",
-    "summary": "Provides some extensions which define a bridge for the differences between Type and TypeInfo.",
-    "tags": [ "type", "typeinfo", "extensions", "proxy", "bridge", "reflection" ],
-    "projectUrl": "https://github.com/StefH/ReflectionBridge",
     "tooling": {
         "defaultNamespace": "ReflectionBridge"
     },
-    "releasenotes": "Added IsSealed() and IsAbstract() extensions and added Framework SL50.",
+
+    "packOptions": {
+        "owners": [ "Stef Heyenrath" ],
+        "summary": "Provides some extensions which define a bridge for the differences between Type and TypeInfo.",
+        "tags": [ "type", "typeinfo", "extensions", "proxy", "bridge", "reflection" ],
+        "repository": {
+            "type": "git",
+            "url": "https://github.com/StefH/ReflectionBridge"
+        },
+        "projectUrl": "https://github.com/StefH/ReflectionBridge",
+        "licenseUrl": "https://github.com/StefH/ReflectionBridge/blob/master/licence.txt",
+        "releasenotes": "Added IsSealed() and IsAbstract() extensions and added Framework SL50."
+    },
 
     "dependencies": {
     },
 
-    "compilationOptions": {
+    "buildOptions": {
         "define": [ "REFLECTIONBRIDGE" ]
     },
 
@@ -41,55 +49,46 @@
         },
         "netcore45": {
             "dependencies": {
-                "System.Runtime": "4.0.21-beta-*",
+                "System.Runtime": "4.0.0",
 
-                "System.Collections": "4.0.11-beta-*",
+                "System.Collections": "4.0.10",
 
-                "System.Linq": "4.0.1-beta-*",
+                "System.Linq": "4.0.0",
 
-                "System.Reflection.Extensions": "4.0.1-beta-*",
-                "System.Reflection.TypeExtensions": "4.0.1-beta-*"
+                "System.Reflection.Extensions": "4.0.0",
+                "System.Reflection.TypeExtensions": "4.0.0"
             }
         },
         "netcore451": {
             "dependencies": {
-                "System.Runtime": "4.0.21-beta-*",
+                "System.Runtime": "4.0.10",
 
-                "System.Collections": "4.0.11-beta-*",
+                "System.Collections": "4.0.10",
 
-                "System.Linq": "4.0.1-beta-*",
+                "System.Linq": "4.0.0",
 
-                "System.Reflection.Extensions": "4.0.1-beta-*",
-                "System.Reflection.TypeExtensions": "4.0.1-beta-*"
+                "System.Reflection.Extensions": "4.0.0",
+                "System.Reflection.TypeExtensions": "4.0.0"
             }
         },
         "netcore50": {
             "dependencies": {
-                "System.Runtime": "4.0.21-beta-*",
+                "System.Runtime": "4.1.0-rc2-*",
 
-                "System.Collections": "4.0.11-beta-*",
+                "System.Collections": "4.0.11-rc2-*",
 
-                "System.Linq": "4.0.1-beta-*",
-                "System.Reflection.Extensions": "4.0.1-beta-*",
-                "System.Reflection.TypeExtensions": "4.0.1-beta-*"
+                "System.Linq": "4.1.0-rc2-*",
+                "System.Reflection.Extensions": "4.0.1-rc2-*",
+                "System.Reflection.TypeExtensions": "4.1.0-rc2-*"
             }
         },
         "dnx451": {
             "dependencies": {
-                "System.Runtime": "4.0.21-beta-*",
+                "System.Runtime": "4.0.10",
 
-                "System.Collections": "4.0.11-beta-*",
+                "System.Collections": "4.0.10",
 
-                "System.Linq": "4.0.1-beta-*"
-            }
-        },
-        "dnx452": {
-            "dependencies": {
-                "System.Runtime": "4.0.21-beta-*",
-
-                "System.Collections": "4.0.11-beta-*",
-
-                "System.Linq": "4.0.1-beta-*"
+                "System.Linq": "4.0.0"
             }
         },
         "dnxcore5": {
@@ -118,18 +117,18 @@
         },
         "uap10.0": {
             "dependencies": {
-                "System.Runtime": "4.0.21-beta-*",
+                "System.Runtime": "4.1.0-rc2-*",
 
-                "System.Collections": "4.0.11-beta-*",
+                "System.Collections": "4.0.11-rc2-*",
 
-                "System.Linq": "4.0.1-beta-*",
+                "System.Linq": "4.1.0-rc2-*",
 
                 "System.Reflection.Extensions": "4.0.1-beta-*",
-                "System.Reflection.TypeExtensions": "4.0.1-beta-*"
+                "System.Reflection.TypeExtensions": "4.1.0-rc2-*"
             }
         },
         "sl5": {
-            "compilationOptions": {
+            "buildOptions": {
                 "define": [ "SILVERLIGHT" ]
             },
             "dependencies": {
