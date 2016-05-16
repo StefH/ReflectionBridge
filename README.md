@@ -4,6 +4,26 @@
 
 Provides some extensions which define a bridge for the differences between Type and TypeInfo.
 
+This library can be used for the following Frameworks:
+- net2.0
+- net3.5
+- net4.0
+- net4.5
+- net4.5.x
+- net4.6
+- net4.6.1
+- netcore4.5 Windows Store apps
+- netcore4.5.1 Windows Store apps (Windows 8.1)
+- netcore5.0 Windows Universal
+- dnx451
+- dnxcore5
+- uap10.0
+- sl5 SilverLight 5.0
+- netstandard1.3
+- netstandard1.4
+- netstandard1.5
+
+
 So instead of doing this in your code:
 ```c#
 string s = "example";
