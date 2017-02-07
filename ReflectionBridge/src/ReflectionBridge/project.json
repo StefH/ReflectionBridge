@@ -17,7 +17,7 @@
         },
         "projectUrl": "https://github.com/StefH/ReflectionBridge",
         "licenseUrl": "https://github.com/StefH/ReflectionBridge/blob/master/licence.txt",
-        "releasenotes": "Added IsSealed() and IsAbstract() extensions and added Framework SL50."
+        "releaseNotes": "Upgraded some dependencies"
     },
 
     "dependencies": {
