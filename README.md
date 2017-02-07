@@ -2,6 +2,8 @@
 
 [![Build status](https://ci.appveyor.com/api/projects/status/xe3rcxeyyvfr9kwc?svg=true)](https://ci.appveyor.com/project/StefH/ReflectionBridge)
 
+[![NuGet Badge](https://buildstats.info/nuget/ReflectionBridge)](https://www.nuget.org/packages/ReflectionBridge)
+
 Provides some extensions which define a bridge for the differences between Type and TypeInfo.
 
 This library can be used for the following Frameworks:
@@ -18,10 +20,8 @@ This library can be used for the following Frameworks:
 - dnx451
 - dnxcore5
 - uap10.0
-- sl5 SilverLight 5.0
-- netstandard1.3
-- netstandard1.4
-- netstandard1.5
+- sl5 (SilverLight 5.0)
+- netstandard1.3 and up
 
 
 So instead of doing this in your code:

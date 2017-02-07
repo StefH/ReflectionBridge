@@ -1,5 +1,5 @@
 ﻿{
-    "version": "0.0.11-*",
+    "version": "0.0.12",
     "authors": [ "Stef Heyenrath" ],
     "title": "ReflectionBridge",
     "description": "Provides some extensions which define a bridge for the differences between Type and TypeInfo.",
@@ -73,13 +73,13 @@
         },
         "netcore50": {
             "dependencies": {
-                "System.Runtime": "4.1.0-rc2-*",
+                "System.Runtime": "4.1.0",
 
-                "System.Collections": "4.0.11-rc2-*",
+                "System.Collections": "4.0.11",
 
-                "System.Linq": "4.1.0-rc2-*",
-                "System.Reflection.Extensions": "4.0.1-rc2-*",
-                "System.Reflection.TypeExtensions": "4.1.0-rc2-*"
+                "System.Linq": "4.1.0",
+                "System.Reflection.Extensions": "4.0.1",
+                "System.Reflection.TypeExtensions": "4.1.0"
             }
         },
         "dnx451": {
@@ -93,46 +93,31 @@
         },
         "dnxcore5": {
             "dependencies": {
-                "System.Runtime": "4.0.21-beta-*",
+                "System.Runtime": "4.3.0",
 
-                "System.Collections": "4.0.11-beta-*",
+                "System.Collections": "4.3.0",
 
-                "System.Linq": "4.0.1-beta-*",
+                "System.Linq": "4.3.0",
 
-                "System.Reflection.Extensions": "4.0.1-beta-*",
-                "System.Reflection.TypeExtensions": "4.0.1-beta-*"
-            }
-        },
-        "dotnet5.4": {
-            "dependencies": {
-                "System.Runtime": "4.0.21-beta-*",
-
-                "System.Collections": "4.0.11-beta-*",
-
-                "System.Linq": "4.0.1-beta-*",
-
-                "System.Reflection.Extensions": "4.0.1-beta-*",
-                "System.Reflection.TypeExtensions": "4.0.1-beta-*"
+                "System.Reflection.Extensions": "4.3.0",
+                "System.Reflection.TypeExtensions": "4.3.0*"
             }
         },
         "uap10.0": {
             "dependencies": {
-                "System.Runtime": "4.1.0-rc2-*",
+                "System.Runtime": "4.3.0",
 
-                "System.Collections": "4.0.11-rc2-*",
+                "System.Collections": "4.3.0",
 
-                "System.Linq": "4.1.0-rc2-*",
+                "System.Linq": "4.3.0",
 
-                "System.Reflection.Extensions": "4.0.1-beta-*",
-                "System.Reflection.TypeExtensions": "4.1.0-rc2-*"
+                "System.Reflection.Extensions": "4.3.0",
+                "System.Reflection.TypeExtensions": "4.3.0"
             }
         },
         "sl5": {
             "buildOptions": {
-                "define": [ "SILVERLIGHT" ]
-            },
-            "dependencies": {
-
+                "define": [ "SL50", "SILVERLIGHT" ]
             },
             "frameworkAssemblies": {
                 "mscorlib": "",
@@ -144,83 +129,15 @@
         },
         "netstandard1.3": {
             "buildOptions": { "define": [ "NETSTANDARD" ] },
-            "NETStandard.Library": {
-                "version": "1.5.0-rc2-*"
-            },
             "imports": [
-                "dotnet5.4",
-                "portable-win81+wp81",
-                "portable-net45+wp8",
-                "portable-net45+win8+wp8",
-                "portable-wp81+wpa81",
-                "portable-win81+wp81+wpa81",
-                "portable-net45+win8+wpa81+wp8",
-                "portable-net45+win8",
-                "portable-net45+win8+wpa81",
-                "portable-win81+wpa81",
-                "portable-net451+win81",
-                "portable-net451+win81+wpa81"
+                "dotnet5.4"
             ],
             "dependencies": {
-                "System.Runtime": "4.1.0-rc2-*",
-                "System.Collections": "4.0.11-rc2-*",
-                "System.Linq": "4.1.0-rc2-*",
-                "System.Reflection.Extensions": "4.0.1-rc2-*",
-                "System.Reflection.TypeExtensions": "4.1.0-rc2-*"
-            }
-        },
-        "netstandard1.4": {
-            "buildOptions": { "define": [ "NETSTANDARD" ] },
-            "NETStandard.Library": {
-                "version": "1.5.0-rc2-*"
-            },
-            "imports": [
-                "dotnet5.5",
-                "portable-win81+wp81",
-                "portable-net45+wp8",
-                "portable-net45+win8+wp8",
-                "portable-wp81+wpa81",
-                "portable-win81+wp81+wpa81",
-                "portable-net45+win8+wpa81+wp8",
-                "portable-net45+win8",
-                "portable-net45+win8+wpa81",
-                "portable-win81+wpa81",
-                "portable-net451+win81",
-                "portable-net451+win81+wpa81"
-            ],
-            "dependencies": {
-                "System.Runtime": "4.1.0-rc2-*",
-                "System.Collections": "4.0.11-rc2-*",
-                "System.Linq": "4.1.0-rc2-*",
-                "System.Reflection.Extensions": "4.0.1-rc2-*",
-                "System.Reflection.TypeExtensions": "4.1.0-rc2-*"
-            }
-        },
-        "netstandard1.5": {
-            "buildOptions": { "define": [ "NETSTANDARD" ] },
-            "NETStandard.Library": {
-                "version": "1.5.0-rc2-*"
-            },
-            "imports": [
-                "dotnet5.5",
-                "portable-win81+wp81",
-                "portable-net45+wp8",
-                "portable-net45+win8+wp8",
-                "portable-wp81+wpa81",
-                "portable-win81+wp81+wpa81",
-                "portable-net45+win8+wpa81+wp8",
-                "portable-net45+win8",
-                "portable-net45+win8+wpa81",
-                "portable-win81+wpa81",
-                "portable-net451+win81",
-                "portable-net451+win81+wpa81"
-            ],
-            "dependencies": {
-                "System.Runtime": "4.1.0-rc2-*",
-                "System.Collections": "4.0.11-rc2-*",
-                "System.Linq": "4.1.0-rc2-*",
-                "System.Reflection.Extensions": "4.0.1-rc2-*",
-                "System.Reflection.TypeExtensions": "4.1.0-rc2-*"
+                "System.Runtime": "4.3.0",
+                "System.Collections": "4.3.0",
+                "System.Linq": "4.3.0",
+                "System.Reflection.Extensions": "4.3.0",
+                "System.Reflection.TypeExtensions": "4.3.0"
             }
         }
     }
