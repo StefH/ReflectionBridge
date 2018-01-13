@@ -14,13 +14,13 @@ This library can be used for the following Frameworks:
 - net4.5.x
 - net4.6
 - net4.6.1
-- netcore4.5 Windows Store apps
-- netcore4.5.1 Windows Store apps (Windows 8.1)
-- netcore5.0 Windows Universal
-- dnx451
-- dnxcore5
+- netcore4.5 Windows Store apps [only up until version 0.0.12]
+- netcore4.5.1 Windows Store apps (Windows 8.1) [only up until version 0.0.12]
+- netcore5.0 Windows Universal [only up until version 0.0.12]
+- dnx451 [only up until version 0.0.12]
+- dnxcore5 [only up until version 0.0.12]
 - uap10.0
-- sl5 (SilverLight 5.0)
+- sl5 (SilverLight 5.0) [only up until version 0.0.12]
 - netstandard1.3 and up
 
 

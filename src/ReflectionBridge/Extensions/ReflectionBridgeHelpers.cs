@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Reflection;
-
 #if REFLECTIONBRIDGE
 using System.Collections.Generic;
 using System.Linq;
@@ -18,9 +17,15 @@ namespace ReflectionBridge.Extensions
         public static Type UnwrapNullable(this Type type)
         {
             if (!type.IsGenericType())
+            {
                 return type;
+            }
+
             if (type.GetGenericTypeDefinition() != typeof(Nullable<>))
+            {
                 return type;
+            }
+
             return type.GetGenericArguments()[0];
         }
     }

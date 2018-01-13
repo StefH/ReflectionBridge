@@ -161,6 +161,16 @@ namespace ReflectionBridge.Extensions
 #endif
         }
 
+        public static T GetFieldValue<T>(this Type type, string fieldName, object target)
+        {
+#if REFLECTIONBRIDGE && (!(NET40 || NET35 || NET20 || SILVERLIGHT))
+            FieldInfo field = type.GetTypeInfo().GetDeclaredField(fieldName);
+            return (T) field.GetValue(target);
+#else
+            return (T) type.InvokeMember(fieldName, BindingFlags.GetField | BindingFlags.GetProperty, null, target, null);
+#endif
+        }
+
         public static void SetFieldValue(this Type type, string fieldName, object target, object value)
         {
 #if REFLECTIONBRIDGE && (!(NET40 || NET35 || NET20 || SILVERLIGHT))

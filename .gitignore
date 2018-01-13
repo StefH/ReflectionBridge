@@ -182,7 +182,5 @@ UpgradeLog*.htm
 # Microsoft Fakes
 FakesAssemblies/
 
-# DNX
-project.lock.json
-artifacts/
-ReflectionBridge/src/ReflectionBridge/project.lock.json
+.vs
+/.vs

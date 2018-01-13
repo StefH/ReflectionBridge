@@ -1,9 +1,8 @@
 os: Visual Studio 2015
 
-version: 0.0.12.{build}
+version: 0.0.13.{build}
 
 configuration:
-- Debug
 - Release
 
 platform: Any CPU
@@ -12,18 +11,12 @@ init:
 - ps: $Env:LABEL = "CI" + $Env:APPVEYOR_BUILD_NUMBER.PadLeft(5, "0")
 
 install:
-- ps: Start-FileDownload 'https://dotnetcli.blob.core.windows.net/dotnet/beta/Installers/Latest/dotnet-dev-win-x64.latest.exe'
-- cmd: dotnet-dev-win-x64.latest.exe /quiet
+- ps: Start-FileDownload 'https://download.microsoft.com/download/D/7/2/D725E47F-A4F1-4285-8935-A91AE2FCC06A/dotnet-sdk-2.0.3-win-gs-x64.exe'
+- cmd: dotnet-sdk-2.0.3-win-gs-x64.exe /quiet
+- ps: $env:DOTNET_SKIP_FIRST_TIME_EXPERIENCE = "true"
 
 environment:
   PATH: $(PATH);$(PROGRAMFILES)\dotnet\
 
 build_script:
-- appveyor-retry dotnet restore .\ReflectionBridge\src\ReflectionBridge  -v Minimal
-- dotnet pack -c %CONFIGURATION% --no-build --version-suffix %LABEL% -o .\artifacts .\ReflectionBridge\src\ReflectionBridge\project.json
-
-artifacts:
-- path: artifacts\**\*.*
-
-cache:
-- '%USERPROFILE%\.nuget\packages'
+- dotnet build .\src\ReflectionBridge\ReflectionBridge.csproj -c %CONFIGURATION% --framework netstandard1.3
